@@ -100,12 +100,15 @@ namespace ConsoleApplication
             }
             Console.WriteLine("[{0}]", string.Join(", ", arr));
         }
-        
-        
 
-
-
-
+        // Shifting the values in an array
+        public static void shiftValues(int[] arr){
+            for(int i = 1; i < arr.Length; i++){
+                arr[i-1] = arr[i];
+            }
+            arr[arr.Length-1] = 0;
+            Console.WriteLine("[{0}]", string.Join(", ", arr));
+        }
 
 
         
@@ -127,7 +130,8 @@ namespace ConsoleApplication
             // oddArray();
             // greaterThanY(myArray, 5);
             // square(myArray);
-            zeroNegatives(myArray);
+            // zeroNegatives(myArray);
+            // shiftValues(myArray);
         }
     }
 }
