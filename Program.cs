@@ -37,10 +37,31 @@ namespace ConsoleApplication
         }
 
 
+        // Find Max
+        public static void findMax(int[] arr){
+            int max = arr[0];
+            for( int i = 1; i < arr.Length; i++){
+                if(arr[i] > max){
+                    max = arr[i];
+                }
+            }
+            Console.WriteLine(max);
+        }
+
+
+        // Get Average
+        public static void average(int[] arr){
+            int sum = 0;
+            for( int i = 0; i < arr.Length; i++){
+                sum = sum + arr[i];
+            }
+            Console.WriteLine(sum/arr.Length);
+        }        
 
 
 
 
+        
         
         
         
@@ -53,12 +74,13 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            int[] myArray = {1,3,5,7,9,13};
+            int[] myArray = {1,3,52,7,9,13};
             // print255();
             // printOdds();
             // printSums();
-            printArray(myArray);
-
+            // printArray(myArray);
+            // findMax(myArray);
+            average(myArray);
         }
     }
 }
